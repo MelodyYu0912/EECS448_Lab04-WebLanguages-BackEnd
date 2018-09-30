@@ -28,7 +28,7 @@
               echo "<td>".($i*$j)."</td>";
             }
           }
-          echo"<tr>";
+          echo"</tr>";
         }
       ?>
     </table>
