@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title> Web Store </title>
+    <link href="style.css"
+          rel="stylesheet"
+          type="text/css"/>
+    <script type="text/javascript" src="formChecker.js"></script>
+  </head>
+
+  <body>
+  <form action="customerBackend.php" method="post" onsubmit="return check()">
+    <div id="title">
+      Chinese Restuarant Online Order
+    </div>
+
+    <div id="catalog">
+      <table class="menu">
+        <tr>
+        <td><p class="dish">Pork and Chives Dumpling</p>
+            <p class="dish">$8.00</p>
+            <img src="images2/dumpling.jpg"><br>
+            <input id="dumpling" name="dumpling" type="number" min="0" placeholder="Servings"></td>
+        <td><p class="dish">Saut Wonton</p>
+            <p class="dish">$8.00</p>
+            <img src="images2/wonton.jpg"><br>
+            <input id="wonton" name="wonton" type="number" min="0"  placeholder="Servings"></td>
+        <td><p class="dish">Green Onion Noodles</p>
+            <p class="dish">$10.00</p>
+            <img src="images2/noodles.jpg"><br>
+            <input id="noodles" name="noodles" type="number" min="0" placeholder="Servings"></td></tr>
+        <tr>
+        <td><p class="dish">Scrambled Eggs with Tomatoes over Rice</p>
+            <p class="dish">$11.00</p>
+            <img src="images2/tomato.jpg"><br>
+            <input id= "tomato" name="tomato" type="number" min="0"  placeholder="Servings"></td>
+        <td><p class="dish">Curry Beef Brisket over Rice</p>
+            <p class="dish">$13.00</p>
+            <img src="images2/curry.jpg"><br>
+            <input id="curry" name="rice" type="number" min="0"  placeholder="Servings"></td></tr>
+      </table>
+      <br><input type="button" value="Place the order" onClick ="checkServings()"></td>
+    </div>
+
+    <div id="customerInformation">
+      <fieldset>
+        <legend>CUSTMOER INFORMATION:</legend>
+        <p class="information">Input your username: </p>
+        <input type="text" name="userName" id="userName" placeholder="name@domain.com"required>
+        <p class="information">Creat a password:</p>
+        <input type="password" name="userPwd" id="userPwd">
+        <br>
+        <p class="information">Pick your shipping option:</p>
+        <input type="radio" name="shippingOption" id="shipping1" value="0"> Eat-in <br>
+        <input type="radio" name="shippingOption" id="shipping2" value="0"> To-go <br>
+        <input type="radio" name="shippingOption" id="shipping3" value="5"> $5.00 Food delivery <br>
+        <br>
+
+        <div id="buttons">
+          <button type="reset" value="reset" onclick="location.reload()">Reset the order</button> &nbsp&nbsp
+          <button type="submit" onclick=onsubmit() value="submit">Submit</button>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+  </body>
+</html>
